@@ -7,13 +7,13 @@ import "./styles.scss";
 import styled from "styled-components";
 
 const logoImg = styled.img`
-cursor: pointer;
-width: 100%;
-height: 100px;
+  cursor: pointer;
+  width: 100%;
+  height: 100px;
 `;
 
 function Navbar(props) {
-  console.log({props})
+  console.log({ props });
   const auth = useAuth();
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,13 +23,15 @@ function Navbar(props) {
       <div className="container">
         <div className="navbar-brand">
           <div className="navbar-item">
-            
             <Link to="/">
-              <img className="image"
-//                 <a class="navbar-item">
-//   <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" alt="Bulma">
-// </a>
-                src={props.logo} alt="Logo" />
+              <img
+                className="image"
+                //                 <a class="navbar-item">
+                //   <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" alt="Bulma">
+                // </a>
+                src={props.logo}
+                alt="Logo"
+              />
             </Link>
           </div>
           <div

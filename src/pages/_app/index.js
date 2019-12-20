@@ -2,9 +2,10 @@ import React from "react";
 import HomePage from "./../home";
 import ContactPage from "./../contact";
 import { Switch, Route, Router } from "./../../util/router.js";
-import ContactSection from "./../../components/ContactSection";
-import analytics from "./../../util/analytics.js";
+import Navbar from "./../../components/Navbar";
+import Footer from "./../../components/Footer";
 import { ProvideAuth } from "./../../util/auth.js";
+import "./../../util/analytics.js";
 import "./styles.scss";
 
 function App(props) {
@@ -12,6 +13,11 @@ function App(props) {
     <ProvideAuth>
       <Router>
         <>
+          <Navbar
+            color="white"
+            spaced={true}
+            logo="https://res.cloudinary.com/yodacom/image/upload/v1554864573/yodacom/YodaComLogoTrans150x50_3x.png"
+          />
           <Switch>
             <Route exact path="/" component={HomePage} />
 
@@ -34,14 +40,11 @@ function App(props) {
               }}
             />
           </Switch>
-
-          <ContactSection
+          <Footer
             color="white"
-            size="medium"
-            title="Let's Talk about your idea - Contact Us"
-            subtitle="Let's get to know each other"
-            showNameField={true}
-            buttonText="Send message"
+            size="normal"
+            logo="https://res.cloudinary.com/yodacom/image/upload/v1554864573/yodacom/YodaComLogoTrans150x50_3x.png"
+            copyright="© 2019 Yodacom"
           />
         </>
       </Router>
