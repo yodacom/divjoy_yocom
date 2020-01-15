@@ -1,10 +1,9 @@
 import React from "react";
-import Navbar from "./../../components/Navbar";
 import HeroSection from "./../../components/HeroSection";
 import FeaturesSection from "./../../components/FeaturesSection";
 import ContentCardsSection from "./../../components/ContentCardsSection";
 import VideoSection from "./../../components/VideoSection";
-import Footer from "./../../components/Footer";
+import ContactSection from "./../../components/ContactSection";
 import { useRouter } from "./../../util/router.js";
 import "./styles.scss";
 import styled from "styled-components";
@@ -14,11 +13,6 @@ function HomePage(props) {
 
   return (
     <>
-      <Navbar
-        color="white"
-        spaced={true}
-        logo="https://res.cloudinary.com/yodacom/image/upload/v1554864573/yodacom/YodaComLogoTrans150x50_3x.png"
-      />
       <HeroSection
         color="white"
         size="medium"
@@ -47,7 +41,7 @@ function HomePage(props) {
         size="medium"
         title="YodaCom Landing Page Video Production"
         subtitle="Example landing page video we produced for FixandFlip.com"
-        embedUrl= "https://www.youtube.com/embed/l2eENaed8dM"
+        embedUrl="https://www.youtube.com/embed/l2eENaed8dM"
         //"https://res.cloudinary.com/yodacom/video/upload/v1570111400/fixandflipwithaudio4_uj2p6k.mp4"
       />
       <VideoSection
@@ -59,11 +53,13 @@ function HomePage(props) {
         //"https://www.youtube.com/embed/UexCU_gqr2E"
         //"https://res.cloudinary.com/yodacom/video/upload/v1570111400/fixandflipwithaudio4_uj2p6k.mp4"
       />
-      <Footer
+      <ContactSection
         color="white"
-        size="normal"
-        logo="https://res.cloudinary.com/yodacom/image/upload/v1554864573/yodacom/YodaComLogoTrans150x50_3x.png"
-        copyright="© 2019 Yodacom"
+        size="medium"
+        title="Let's Talk about your idea - Contact Us"
+        subtitle="Let's get to know each other"
+        showNameField={true}
+        buttonText="Send message"
       />
     </>
   );
